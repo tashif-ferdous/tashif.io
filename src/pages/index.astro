@@ -37,15 +37,30 @@ const description =
       media="print"
       onload="this.media='all'"
     />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fira%20Mono:wght@400;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira%20Mono:wght@400;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
       />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fira%20Mono:wght@400;800&display=swap"
+      />
     </noscript>
 
     <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="Tashif Ferdous" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -82,9 +97,9 @@ const description =
     <Header />
     <Splash />
     <div class="px-8 py-32 space-y-24">
-      <Intro />
-      <Features />
-      <Compatibility />
+      <!-- <Intro /> -->
+      <!-- <Features /> -->
+      <!-- <Compatibility /> -->
       <Showcase />
     </div>
     <Footer />

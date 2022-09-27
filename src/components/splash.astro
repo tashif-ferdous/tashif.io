@@ -24,20 +24,16 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full sm:grid-cols-2 place-items-center">
-    <h2
-      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
-      >
-        Build fast
-        <br /> websites,
-        <br /> faster.
-      </div>
-    </h2>
-    <picture
+  <div class="relative grid h-full place-items-center">
+    <div class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end md:justify-self-center">
+      <h2 class="font-extrabold tracking-tighter text-center text-8xl gradient-text">
+        Tashif Ferdous,
+        <br /> fullstack engineer.
+      </h2>
+    </div>
+  </div>
+    
+    <!-- <picture
       class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <source type="image/avif" srcset={avifSrcset} {sizes} />
@@ -50,8 +46,7 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
         height={png[0].height}
         alt="A floating astronaut in a space suit"
       />
-    </picture>
-  </div>
+    </picture> -->
 </section>
 
 <noscript>
