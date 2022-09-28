@@ -3,35 +3,43 @@ import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 
 const navItems = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
+  { title: "About", url: "#about" },
+  { title: "Tech", url: "#tech-stack" },
   { title: "Showcase", url: "#showcase" },
+  { title: "Contact", url: "#contact"}
 ];
 ---
-
 <header
   id="page-header"
   class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+  <a class="flex flex-row items-center gap-3 hover:!text-default" href="#">
+    <h1 class="sr-only">Tashif Ferdous</h1>
+    <h1 class="font-sans font-bold tracking-tighter text-secondary">TF</h1>
+    <h1 class="hidden font-mono md:block text-primary">Tashif Ferdous</h1>
   </a>
   <div>
-    <div class="flex items-center gap-6">
+    <div class="flex flex-row items-center gap-6">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
-          {
-            navItems.map(({ title, url }) => (
-              <li>
-                <a class="text-sm" href={url}>
-                  {title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <div class="flex items-center gap-4">
+          <ul class="flex items-center gap-6">
+            {
+              navItems.map(({ title, url }, index) => (
+                <li>
+                    <a class="font-mono text-sm text-primary" href={url}>
+                        <span class="text-secondary">{String(index+1).padStart(2, '0')}. </span> {title}
+                    </a>
+                </li>
+              ))
+            }
+          </ul>
+          <a class="pl-2 text-primary" href="https://github.com/tashif-ferdous">
+            <Icon name="socials/github" class="h-6" />
+          </a>
+          <a class="text-primary" href="https://www.linkedin.com/in/tferd/">
+            <Icon name="socials/linkedin" class="h-6" />
+          </a> 
+        </div>
       </nav>
       <button
         id="open-nav-button"
@@ -57,15 +65,26 @@ const navItems = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <h1 class="font-sans font-bold text-4xl tracking-tighter gradient-text-purple">
+              Tashif Ferdous
+            </h1> 
           </div>
           <nav>
+            <!-- socials -->
+            <div class="flex flex-row justify-center space-x-4 p-4">
+              <a class="text-pr" href="https://github.com/tashif-ferdous">
+                <Icon name="socials/github" class="h-8 text-primary" />
+              </a>
+              <a href="https://www.linkedin.com/in/tferd/">
+                <Icon name="socials/linkedin" class="h-8 text-primary" />
+              </a>   
+            </div>
             <ul class="flex flex-col">
               {
-                navItems.map(({ title, url }) => (
+                navItems.map(({ title, url }, index) => (
                   <li>
-                    <a class="block py-4 text-xl text-center" href={url}>
-                      {title}
+                    <a class="block py-4 px-6 font-mono text-primary text-xl" href={url}>
+                      #{String(index+1).padStart(2, '0')}. {title}
                     </a>
                   </li>
                 ))

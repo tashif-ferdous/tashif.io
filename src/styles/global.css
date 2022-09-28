@@ -6,7 +6,7 @@ a,
   @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-secondary;
 }
 
-.gradient-text {
+.gradient-text-purple {
   @apply text-transparent bg-clip-text;
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-purple-500;
 }
