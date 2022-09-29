@@ -1,18 +1,14 @@
 ---
-const { title, id } = Astro.props;
+const { number, title, id } = Astro.props;
 ---
 
-<section {id} class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24">
-  <div class="flex flex-col items-center gap-4">
-    <slot name="eyebrow" />
-    <h2
-      class="text-6xl font-extrabold tracking-tight text-center gradient-text"
-    >
-      {title}
-    </h2>
+<section {id} class="flex flex-col items-center gap-4 space-y-8 scroll-mt-24 h-full">
+  <!-- heading section -->
+  <div class="flex flex-row gap-4 justify-start items-end w-11/12 sm:w-5/6 md:w-3/4 lg:w-2/3">
+    <h4 class="font-mono text-2xl text-secondary">#{String(number).padStart(2, '0')}.</h4>
+    <h2 class="font-sans font-extrabold tracking-tight text-4xl underline decoration-fuchsia-500 gradient-text-green">{title}</h2>
   </div>
-  <p class="max-w-xl text-2xl font-extrabold text-center">
-    <slot name="lead" />
-  </p>
-  <slot />
+  <div class="flex flex-col sm:w-5/6 md:w-3/4 lg:w-2/3">
+    <slot/>
+  </div>
 </section>

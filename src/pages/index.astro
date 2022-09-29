@@ -3,7 +3,7 @@ import Compatibility from "~/components/compatibility.astro";
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
+import About from "~/components/about.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
@@ -11,7 +11,7 @@ import "~/styles/index.css";
 const { site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+  "Tashif Ferdous is a fullstack software in NYC.";
 ---
 
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
@@ -21,7 +21,7 @@ const description =
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-    <title>Astro Landing Page</title>
+    <title>Tashif Ferdous</title>
     <meta name="description" content={description} />
 
     <!-- fonts -->
@@ -97,7 +97,7 @@ const description =
     <Header />
     <Splash />
     <div class="px-8 py-32 space-y-24">
-      <!-- <Intro /> -->
+      <About />
       <!-- <Features /> -->
       <!-- <Compatibility /> -->
       <!-- <Showcase /> -->
