@@ -9,7 +9,7 @@ import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 
 const { site } = Astro;
-const image = new URL("social.jpg", site);
+const image = new URL("social.png", site);
 const description =
   "Tashif Ferdous is a fullstack software in NYC.";
 ---
@@ -19,7 +19,7 @@ const description =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> -->
 
     <title>Tashif Ferdous</title>
     <meta name="description" content={description} />
