@@ -1,39 +1,143 @@
 ---
-import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+
+let frontend = [
+  {
+    title: "React",
+    description:
+      "Bread and butter.",
+    icon: "frameworks/react",
+    link: "https://beta.reactjs.org/"
+  },
+  {
+    title: "TailwindCSS",
+    description:
+      "Easy styling and responsive layout design via classes.",
+    icon: "frameworks/tailwind-css",
+    link: "https://tailwindcss.com/"
+  },
+  {
+    title: "Redux",
+    description:
+      "Sophisticated state management system, useful for async calls.",
+    icon: "frameworks/redux", 
+    link: "https://redux.js.org/"
+  },
+  {
+    title: "React Query",
+    description:
+      "Easy way to sync backend data with the frontend.",
+    icon: "frameworks/react-query",
+    link: "https://tanstack.com/query/v4/" 
+  },
+];
+
+const backend = [
+  {
+    title: "NextJS",
+    description:
+      "Backend with file based routing and setup for server side rendering.",
+    icon: "frameworks/nextjs",
+    link: "https://nextjs.org/" 
+  },
+  {
+    title: "Prisma",
+    description:
+      "ORM for Typescript that has a easy to understand schema with code generated models.",
+    icon: "frameworks/prisma",
+    link: "https://www.prisma.io/" 
+  },
+  {
+    title: "PostgreSQL",
+    description:
+      "Opensource relational database that scales well.",
+    icon: "frameworks/react-query-icon",
+    link: "https://www.prisma.io/" 
+  },
+  {
+    title: "ExpressJS",
+    description:
+      "More traditional microframework for Node.js",
+    icon: "frameworks/prisma",
+    link: "https://www.prisma.io/" 
+  },
+  {
+    title: "Flask",
+    description:
+      "Python's microframework to serve up an webapp",
+    icon: "frameworks/flasks",
+    link: "https://www.prisma.io/" 
+  },
+];
+
+const deployment = [
+  {
+    title: "Vercel",
+    description:
+      "Deploy on the edge easily with your Github.  Amazing UX.",
+    icon: "platforms/vercel",
+    link: "https://www.vercel.app/"  
+  },
+  {
+    title: "Heroku",
+    description:
+      "Deploy on the cloud easily via 'git push heroku main'.",
+    icon: "platforms/heroku",
+    link: "https://www.heroku.com/"  
+  }
+];
+const collaboration = [
+  {
+    title: "Git",
+    description:
+      "Work on a team by working in parallel (branches).",
+    icon: "tools/git-icon",
+    link: "https://git-scm.com/"  
+  },
+  {
+    title: "Github",
+    description:
+      "Github issues to keep track of work, pull requests to review code, and actions for CI/CD",
+    icon: "socials/github",
+    link: "https://github.com/"   
+  },
+  {
+    title: "Jira",
+    description:
+      "Epics, sprints, and the backlog.  Break down tasks into small interable steps.",
+    icon: "tools/jira",
+    link: "https://github.com/"
+  }
+];
+
+frontend
+
+const slides = [].concat(...frontend, ...backend, ...collaboration, ...deployment);
 ---
 
-<ContentSection number={1} title="About Tashif" id="about">
-  <!-- <Icon slot="eyebrow" name="logomark" class="h-32" /> -->
-  <Fragment>
-    <p class="font-sans mb-2">
-      I'm <span class="text-secondary">Tashif</span>, a full-stack software engineer in NYC.
-    </p>
-    <p class="font-sans mb-10">
-      Coming from nontraditional backgrounds in education and medicine, I began my software journey when I built scripts to automate some of my work.  
-    </p>
-    <p>
-      I taught students math, science, and English to help them in their academic careers.  So <span class="italic">how do I teach computers to help me with my work?</span>  I found coding to be fun, like solving math puzzles.  And I loved the time my scripts were saving me.
-    </p>
-      I now wanted to pursue the craft professionally, so I enrolled in Fullstack Academy.  
-    <p>
-      Today, I'm focused on shipping production-ready apps that help people.
-    </p> 
-  </Fragment>
-  <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
-    >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
-  </div> -->
+<ContentSection number={2} title="Tech Stack" id="tech-stack">
+  <h4 class="text-primary font-sans text-xl tracking-tight mb-4">
+    Here are the technologies I've used recently.
+  </h4>
+  <div class="scene">
+    <div class="cube-face face-north">
+      <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {slides.map(({title, description, icon, link}) => {
+          return ( 
+            <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+              <div class="w-16 h-16 p-3 border-2 border-current rounded-full hover:animate-pulse">
+                <a href={link} target="_blank"><Icon class="text-secondary" name={icon} /></a>
+              </div>
+              <p class="text-xl font-extrabold text-center">{title}</p>
+              <p class="text-sm text-center text-offset">{description}</p>
+            </li>
+          )})
+        }
+      </ul>
+    </div>
+  </div>
 </ContentSection>
+
+<script>
+</script>

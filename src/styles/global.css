@@ -14,4 +14,4 @@ a,
 .gradient-text-green {
   @apply text-transparent bg-clip-text;
   @apply bg-gradient-to-br from-indigo-500 via-green-500 to-purple-500;
-} 
+}
