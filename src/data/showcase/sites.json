@@ -1,5 +1,10 @@
 [
   {
+    "title": "Fullstack Fitness",
+    "image": "src/data/showcase/images/fullstack-fitness.png",
+    "url": "https://fullstack-fitness-web.vercel.app/" 
+  },
+  {
     "title": "Cub Hub",
     "image": "src/data/showcase/images/cubhub.png",
     "url": "https://https://tashif-day-care.herokuapp.com/"

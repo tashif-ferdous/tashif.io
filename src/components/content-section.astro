@@ -4,12 +4,12 @@ const { number, title, id } = Astro.props;
 
 <section {id} class="flex flex-col items-center justify-center min-h-screen gap-4 space-y-8 scroll-mt-24">
   <!-- heading section -->
-  <div class="flex flex-row gap-4 justify-start items-end w-11/12 sm:w-5/6 md:w-3/4 lg:w-2/3">
+  <div class="flex flex-row gap-4 justify-start items-end w-11/12 sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2">
     <h4 class="font-mono text-2xl text-secondary">#{String(number).padStart(2, '0')}.</h4>
     <h2 class="font-sans font-extrabold tracking-tight text-4xl underline decoration-fuchsia-500 gradient-text-green">{title}</h2>
   </div>
   <!-- child slot -->
-  <div class="flex flex-col sm:w-5/6 md:w-3/4 lg:w-2/3">
+  <div class="flex flex-col sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2">
     <slot/>
   </div>
 </section>
