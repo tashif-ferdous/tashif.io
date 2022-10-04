@@ -1,27 +1,28 @@
 ---
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
+import { GITHUB_URL, LINKEDIN_URL, MAILTO_URL } from "~/data/contants";
 
 const links = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
+    url: "/#",
+    description: "Tashif's portfolio",
     icon: "mdi:home",
   },
   {
-    url: "https://github.com/withastro/astro",
-    description: "Astro on GitHub",
-    icon: "fa-brands:github-alt",
+    url: GITHUB_URL,
+    description: "Tashif on GitHub",
+    icon: "socials/github",
   },
   {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
+    url: LINKEDIN_URL,
+    description: "Tashif on LinkedIn",
+    icon: "socials/linkedin",
   },
   {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
+    url: MAILTO_URL,
+    description: "Message Tashif",
+    icon: "socials/send",
   },
 ];
 ---
@@ -39,7 +40,7 @@ const links = [
             href={link.url}
           >
             <span class="sr-only">{link.description}</span>
-            <Icon class="h-full" name={link.icon} />
+            <Icon class="h-full hover:animate-pulse" name={link.icon} />
           </a>
         </li>
       ))

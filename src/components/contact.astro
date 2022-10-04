@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL, MAILTO_URL } from "~/data/contants";
+---
+
+<ContentSection number={4} title="Contact Tashif" id="contact">
+  <Fragment>
+    <div class="tracking-tight font-sans">
+      <p class="mb-2">
+        I'm open to <span class="text-primary">full-time</span> opportunities.
+      </p>
+    </div>
+    <div class="mt-6 flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+      <a class="pl-2 text-primary hover:animate-ping" href={GITHUB_URL} target="_blank">
+        <Icon name="socials/github" class="h-6" />
+      </a>
+      <a class="text-primary hover:animate-pulse" href={LINKEDIN_URL} target="_blank">
+        <Icon name="socials/linkedin" class="h-6" />
+      </a> 
+      <a class="text-primary hover:animate-pulse" href={RESUME_URL} target="_blank">
+        <Icon name="socials/file-text" class="h-8" />
+      </a>   
+      <a class="text-primary hover:animate-spin" href={MAILTO_URL} target="_top">
+        <Icon name="socials/send" class="h-8" />
+      </a>   
+    </div>
+  </Fragment>
+</ContentSection>

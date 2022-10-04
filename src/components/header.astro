@@ -1,13 +1,13 @@
 ---
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
-import { RESUME_URL } from "~/data/contants";
+import { RESUME_URL, GITHUB_URL, LINKEDIN_URL, MAILTO_URL } from "~/data/contants";
 
 const navItems = [
   { title: "About", url: "#about" },
   { title: "Tech", url: "#tech-stack" },
   { title: "Showcase", url: "#showcase" },
-  { title: "Contact", url: "#contact"}
+  // { title: "Contact", url: "#contact"}
 ];
 ---
 <header
@@ -34,15 +34,18 @@ const navItems = [
               ))
             }
           </ul>
-          <!-- laptop / socials links -->
-          <a class="pl-2 text-primary hover:animate-ping" href="https://github.com/tashif-ferdous" target="_blank">
+          <!-- desktop / socials links -->
+          <a class="pl-2 text-primary hover:animate-ping" href={GITHUB_URL} target="_blank">
             <Icon name="socials/github" class="h-6" />
           </a>
-          <a class="text-primary hover:animate-pulse" href="https://www.linkedin.com/in/tferd/" target="_blank">
+          <a class="text-primary hover:animate-pulse" href={LINKEDIN_URL} target="_blank">
             <Icon name="socials/linkedin" class="h-6" />
           </a> 
           <a class="text-primary hover:animate-pulse" href={RESUME_URL} target="_blank">
             <Icon name="socials/file-text" class="h-8" />
+          </a>   
+          <a class="text-primary hover:animate-spin" href={MAILTO_URL} target="_top">
+            <Icon name="socials/send" class="h-8" />
           </a>   
         </div>
       </nav>
@@ -77,14 +80,17 @@ const navItems = [
           <nav>
             <!-- mobile nav / socials links -->
             <div class="flex flex-row justify-center space-x-4 p-4">
-              <a class="text-primary hover:animate-ping" href="https://github.com/tashif-ferdous" target="_blank">
-                <Icon name="socials/github" class="h-8" />
+              <a class="text-primary hover:animate-ping" href={GITHUB_URL} target="_blank">
+                <Icon name="socials/github" class="h-6" />
               </a>
-              <a class="text-primary hover:animate-pulse" href="https://www.linkedin.com/in/tferd/" target="_blank">
-                <Icon name="socials/linkedin" class="h-8" />
-              </a>   
+              <a class="text-primary hover:animate-pulse" href={LINKEDIN_URL} target="_blank">
+                <Icon name="socials/linkedin" class="h-6" />
+              </a> 
               <a class="text-primary hover:animate-pulse" href={RESUME_URL} target="_blank">
                 <Icon name="socials/file-text" class="h-8" />
+              </a>   
+              <a class="text-primary hover:animate-spin" href={MAILTO_URL} target="_top">
+                <Icon name="socials/send" class="h-8" />
               </a>   
             </div>
             <ul class="flex flex-col">
